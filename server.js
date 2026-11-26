@@ -4,12 +4,9 @@ const express = require('express');
 require('dotenv').config();
 
 // Import database connection
-const connectDB = require('./config/db');
-
-// Import routes and error handler
-const productRoutes = require('./routes/productRoutes');
-const errorHandler = require('./middleware/errorHandler');
-
+const connectDB = require('./src/config/db');
+const productRoutes = require('./src/routes/productRoutes');
+const errorHandler = require('./src/middleware/errorHandler');
 // Create Express application
 const app = express();
 

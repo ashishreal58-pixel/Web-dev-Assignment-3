@@ -8,3 +8,5 @@ Note: Below are the screenshots demonstrating successful execution and response 
 1. Create Product (POST /api/products) <img width="1920" height="1080" alt="01-create-product" src="https://github.com/user-attachments/assets/b486fcaf-c13c-4760-9d37-bbcfb004b38a" />
 2. Get All Products — Filtering, Sorting & Pagination (GET /api/products)
 <img width="1920" height="1080" alt="02-get-all-products" src="https://github.com/user-attachments/assets/4b5f30f4-c7c6-4749-bdef-04e550544034" />
+3. Update Product Details (PUT /api/products/:id)
+<img width="1920" height="1080" alt="03-update-product" src="https://github.com/user-attachments/assets/252d92d1-2598-4b70-be4f-f8710b7c0d57" />

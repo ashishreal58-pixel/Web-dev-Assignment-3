@@ -1,4 +1,4 @@
-# Web-dev-Assignment-3 const mongoose = require("mongoose");
+# Web-dev-Assignment-3 
 Inventory and Data Management System
 RESTful API backend for inventory management built for Assignment 3 (Web Dev III - Unit 3) using Node.js, Express.js, MongoDB, Mongoose, and dotenv.
 

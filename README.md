@@ -1,9 +1,8 @@
 # Web-dev-Assignment-3 const mongoose = require("mongoose");
+Inventory and Data Management System
+RESTful API backend for inventory management built for Assignment 3 (Web Dev III - Unit 3) using Node.js, Express.js, MongoDB, Mongoose, and dotenv.
 
-// Rejects requests with a malformed :id before they reach the controller
-module.exports = (req, res, next) => {
-  if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-    return res.status(400).json({ message: "Invalid product ID" });
-  }
-  next();
-};
+📸 Postman Output Screenshots (Mandatory)
+Note: Below are the screenshots demonstrating successful execution and response validation across all required endpoints via Postman.
+
+1. Create Product (POST /api/products) <img width="1920" height="1080" alt="01-create-product" src="https://github.com/user-attachments/assets/b486fcaf-c13c-4760-9d37-bbcfb004b38a" />

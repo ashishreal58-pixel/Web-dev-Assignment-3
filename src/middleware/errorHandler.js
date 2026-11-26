@@ -1,31 +1,24 @@
-// Centralized error handler
-module.exports = (err, req, res, next) => {
-  // Mongoose schema validation errors
-  if (err.name === "ValidationError") {
-    return res.status(400).json({
-      message: "Validation failed",
-      errors: Object.values(err.errors).map((e) => e.message),
-    });
-  }
+function errorHandler(err, req, res, next) {
+  console.error(err.message);
 
-  // Duplicate key (e.g. SKU already exists)
+
   if (err.code === 11000) {
-    return res.status(409).json({
-      message: `Duplicate value for: ${Object.keys(err.keyValue).join(", ")}`,
-    });
+    return res.status(409).json({ message: 'A product with this SKU already exists' });
   }
 
-  // Bad ObjectId or bad type cast
-  if (err.name === "CastError") {
-    return res.status(400).json({ message: `Invalid ${err.path}` });
+  if (err.name === 'ValidationError') {
+    const messages = Object.values(err.errors).map((item) => item.message);
+    return res.status(400).json({ message: 'Validation failed', errors: messages });
   }
 
-  // Malformed JSON body
-  if (err.type === "entity.parse.failed") {
-    return res.status(400).json({ message: "Invalid JSON body" });
+  if (err.name === 'CastError') {
+    return res.status(400).json({ message: 'Invalid value supplied' });
   }
 
-  res.status(err.statusCode || 500).json({
-    message: err.message || "Internal server error",
+  const statusCode = err.statusCode || err.status || 500;
+  res.status(statusCode).json({
+    message: statusCode === 500 ? 'Internal server error' : err.message
   });
-};
+}
+
+module.exports = errorHandler;

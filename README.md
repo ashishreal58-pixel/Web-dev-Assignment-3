@@ -9,7 +9,7 @@ Note: Below are the screenshots demonstrating successful execution and response 
 2. Get All Products — Filtering, Sorting & Pagination (GET /api/products)
 <img width="1920" height="1080" alt="02-get-all-products" src="https://github.com/user-attachments/assets/4b5f30f4-c7c6-4749-bdef-04e550544034" />
 3. Update Product Details (PUT /api/products/:id)
-<img width="1920" height="1080" alt="03-update-product" src="https://github.com/user-attachments/assets/252d92d1-2598-4b70-be4f-f8710b7c0d57" />
+<img width="1920" height="1080" alt="03-update-product" src="https://github.com/ashishreal58-pixel/Web-dev-Assignment-3" />
 4. Low-Stock Alert Report (GET /api/products/low-stock)<img width="1920" height="1080" alt="05-low-stock-report" src="https://github.com/user-attachments/assets/288e4e21-9222-44ef-ac65-819c65fe24cc" />
 5.Category-wise Summary Aggregation (GET /api/products/summary)<img width="1920" height="1080" alt="06-category-summary" src="https://github.com/user-attachments/assets/60de8cbb-a321-4bed-a75f-e5d77f7d90cc" />
 6.Delete Product (DELETE /api/products/:id)<img width="1920" height="1080" alt="07-delete-product" src="https://github.com/user-attachments/assets/e9f200ae-cc4e-47f7-86ca-8958fbd9f1a8" />
